@@ -4,6 +4,7 @@ public class Main extends PApplet {
     public static void main(String[] args) { PApplet.main("Main"); }
 
     Goal goal= new Goal(this);
+    Ball ball = new Ball(this,500,500);
     @Override
     public void settings() {
         super.settings();
@@ -18,6 +19,7 @@ public class Main extends PApplet {
     @Override
     public void draw() {
         goal.displayGoal();
+        goal.insideGoal(ball);
     }
 
 }
