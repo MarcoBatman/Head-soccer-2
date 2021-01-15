@@ -22,7 +22,9 @@ public class Main extends PApplet {
         background.displayScoreBoard(goal);
         goal.displayGoal();
         goal.insideGoal(ball);
-
+    }
+    public void mouseClicked(){
+        background.helpMenu();
     }
 
 }

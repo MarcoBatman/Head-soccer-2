@@ -6,3 +6,5 @@ public class CPU extends Character {
         super(p, posX, posY);
     }
 }
+
+
