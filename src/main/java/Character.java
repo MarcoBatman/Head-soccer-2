@@ -18,8 +18,8 @@ public class Character {
 
     void move() {
 
-        if (up)
-            vel.y = -40;
+        if (up&&pos.y==p.height-100)
+            vel.y = -5;
         if (left)
             vel.x = -5;
         if (right)
@@ -41,9 +41,9 @@ public class Character {
             pos.x = p.width;
         }
 
-        if (pos.y > p.height)
+        if (pos.y > p.height-100){
             vel.y = 0;
-        pos.y = p.height - 100;
+        pos.y = p.height - 100;}
 
     }
 

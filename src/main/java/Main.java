@@ -39,6 +39,7 @@ public class Main extends PApplet {
         player1.move();
         player2.display();
         player2.move();
+        
     }
     public void mouseClicked(){
         background.helpMenu();
