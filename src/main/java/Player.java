@@ -11,28 +11,49 @@ public class Player extends Character {
 
     boolean setMove(int k, boolean b) {
 
-
+if(playernr==1)
         switch (k) {
           case +'W':
-          case 38:
+
             return up = b;
 
           case +'S':
-          case 40:
+
             return down = b;
 
             case +'A':
-            case 37:
+
                 return left = b;
 
             case +'D':
-            case 39:
+
                 return right = b;
 
             default:
                 return b;
-        }
+        }else{
+            if(playernr==2){
+            switch (k) {
 
+                case 38:
+                    return up = b;
+
+
+                case 40:
+                    return down = b;
+
+
+                case 37:
+                    return left = b;
+
+
+                case 39:
+                    return right = b;
+
+                default:
+                    return b;
+            }}else
+        return b;}
     }
 
 }
