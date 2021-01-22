@@ -6,17 +6,20 @@ import java.util.ArrayList;
 public class Background {
 
 PApplet p;
+    int screenChange;
+    ArrayList<Button> buttonList;
+
     Background(PApplet p){
         this.p = p;
 
     }
-    int screenChange = 1;
-    ArrayList<Button> buttonList;
 
 
+    public void displayButtons(ArrayList<Button> buttonList){
+        for (int i = 0; i <buttonList.size() ; i++) {
+            buttonList.get(i).drawButton();
 
-    public void displayButtons(Button button1){
-        button1.drawButton();
+        }
     }
     public void inGame(Goal goal){
         if (screenChange == 1) {
@@ -40,16 +43,18 @@ PApplet p;
 
         }
     }
-    public void highScoreMenu(){
+    public void highScoreMenu() {
         //Viser highscores (gemmes ikke hvis man lukker spillet)
-
-        p.textSize(32);
+        if (screenChange == 4) {
+            p.textSize(32);
             p.textAlign(PConstants.CENTER);
-            p.text("Highscore for this sesion",p.width/2,150);
-           // p.text(highscore,p.width/2,250);
+            p.text("Highscore for this sesion", p.width / 2, 150);
+            // p.text(highscore,p.width/2,250);
+        }
     }
     public void helpMenu() {
         //Viser kontrols
+        if (screenChange==3) {
             p.textSize(32);
             p.textAlign(PConstants.CENTER);
             p.text("Controlls", p.width / 2, 150);
@@ -59,6 +64,7 @@ PApplet p;
             p.text("Jump = W\nMove left = A\nMove right = D\nKick = Spacebar", 150, 275);
             p.text("Jump = ^\nMove left = <-\nMove right = ->\nKick = Cant huske", 850, 275);
 
+        }
         }
 
 
