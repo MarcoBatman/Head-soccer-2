@@ -31,6 +31,7 @@ public class Main extends PApplet {
     @Override
     public void draw() {
         clear();
+
         background.mainMenu();
         background.inGame(goal);
         goal.insideGoal(ball);
@@ -45,29 +46,54 @@ public class Main extends PApplet {
         ball.display();
 
         
+        background.helpMenu();
+        background.highScoreMenu();
+        buttonsInmenues();
+        background.displayButtons(buttonList);
+
     }
     public void mouseClicked(){
-        background.helpMenu();
+        screenChange++;
     }
-    public void screenChanger(){
-        if (screenChange == 0 && ændreNavnSenere == true){
+    public void buttonsInmenues() {
+        if (screenChange == 0 && ændreNavnSenere == true) {
             fill(255);
-            buttonList.add(new Button(this, 200, 200, 50,50 ,"Controlls"));
-            buttonList.add(new Button(this, 200, 200, 50,50 ,"Spil mod CPU"));
-            buttonList.add(new Button(this, 200, 200, 50,50 ,"Spil mod ven"));
-            buttonList.add(new Button(this, 200, 200, 50,50 ,"Highscore"));
+            buttonList.add(new Button(this, 200, 200, 50, 50, "Controlls"));
+            buttonList.add(new Button(this, 200, 200, 50, 50, "Spil mod CPU"));
+            buttonList.add(new Button(this, 200, 200, 50, 50, "Spil mod ven"));
+            buttonList.add(new Button(this, 200, 200, 50, 50, "Highscore"));
 
 
-        }}
+        }
+        if (screenChange == 1 && ændreNavnSenere == true){
+            //spil
+
+            buttonList.add(new Button(this, width/3, 750, 333, 50, "X"));
+
+        }
+
+        if (screenChange == 2 && ændreNavnSenere == true){
+            //help
+            buttonList.add(new Button(this, width/3, 750, 333, 50, "Back to main menu"));
+        }
+        if (screenChange == 3 && ændreNavnSenere == true){
+            //highscore
+            buttonList.add(new Button(this, width/3, 750, 333, 50, "Back to main menu"));
+
+        }
+
+    }
+
+    public void screenChanger(){
+
+    }
 
 
-    @Override
     public void keyPressed() {
         player1.setMove(keyCode,true);
         player2.setMove(keyCode,true);
     }
 
-    @Override
     public void keyReleased() {
         player1.setMove(keyCode,false);
         player2.setMove(keyCode,false);
