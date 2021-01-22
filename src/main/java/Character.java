@@ -52,5 +52,11 @@ public class Character {
 
     }
 
+    void hitball(Ball ball){
+
+        if(ball.pos.x+10 >= pos.x && ball.pos.x-10<=pos.x+30&&ball.pos.y>=pos.y && ball.pos.y <= pos.y + 100)
+            ball.vel=ball.vel.cross(vel);
+    }
+
 
 }

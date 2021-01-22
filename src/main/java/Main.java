@@ -42,6 +42,11 @@ public class Main extends PApplet {
         player2.move();
         background.helpMenu(screenChange);
         background.highScoreMenu(screenChange);
+
+        player1.hitball(ball);
+        player2.hitball(ball);
+        ball.move();
+        ball.display();
         buttonsInmenues();
         background.displayButtons(buttonList);
 
