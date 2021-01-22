@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Background {
 
 PApplet p;
-    int screenChange;
+    int screenChange = 0;
     ArrayList<Button> buttonList;
 
     Background(PApplet p){
@@ -21,7 +21,7 @@ PApplet p;
 
         }
     }
-    public void inGame(Goal goal){
+    public void inGame(Goal goal, int screenChange){
         if (screenChange == 1) {
             p.noStroke();
             p.rect(p.width / 2 - 50, 0, 100, 50);
@@ -34,7 +34,7 @@ PApplet p;
             goal.displayGoal();
         }
     }
-    public void mainMenu(){
+    public void mainMenu(int screenChange){
         //Main menu hvor man kan gå ind i de andre menuer
         if (screenChange == 0){
             p.textSize(30);
@@ -43,7 +43,7 @@ PApplet p;
 
         }
     }
-    public void highScoreMenu() {
+    public void highScoreMenu(int screenChange) {
         //Viser highscores (gemmes ikke hvis man lukker spillet)
         if (screenChange == 4) {
             p.textSize(32);
@@ -52,7 +52,7 @@ PApplet p;
             // p.text(highscore,p.width/2,250);
         }
     }
-    public void helpMenu() {
+    public void helpMenu(int screenChange) {
         //Viser kontrols
         if (screenChange==3) {
             p.textSize(32);

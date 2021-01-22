@@ -7,8 +7,8 @@ public class Main extends PApplet {
     Background background= new Background(this);
 
     ArrayList<Button> buttonList = new ArrayList();
-    int screenChange;
-    boolean ændreNavnSenere;
+    int screenChange = 0;
+    boolean ændreNavnSenere = true;
 
 
     Player player1 = new Player(this,50,height,1);
@@ -32,16 +32,16 @@ public class Main extends PApplet {
     public void draw() {
         clear();
 
-        background.mainMenu();
-        background.inGame(goal);
+        background.mainMenu(screenChange);
+        background.inGame(goal, screenChange);
         goal.insideGoal(ball);
         screenChanger();
         player1.display();
         player1.move();
         player2.display();
         player2.move();
-        background.helpMenu();
-        background.highScoreMenu();
+        background.helpMenu(screenChange);
+        background.highScoreMenu(screenChange);
         buttonsInmenues();
         background.displayButtons(buttonList);
 
@@ -51,27 +51,27 @@ public class Main extends PApplet {
     }
     public void buttonsInmenues() {
         if (screenChange == 0 && ændreNavnSenere == true) {
-            fill(255);
-            buttonList.add(new Button(this, 200, 200, 50, 50, "Controlls"));
-            buttonList.add(new Button(this, 200, 200, 50, 50, "Spil mod CPU"));
-            buttonList.add(new Button(this, 200, 200, 50, 50, "Spil mod ven"));
-            buttonList.add(new Button(this, 200, 200, 50, 50, "Highscore"));
+            //Mainmenu
+            fill(0);
+            buttonList.add(new Button(this, 600, 500, 50, 50, "Controlls"));
+            buttonList.add(new Button(this, 600, 200, 50, 50, "Spil mod CPU"));
+            buttonList.add(new Button(this, 300, 200, 50, 50, "Spil mod ven"));
+            buttonList.add(new Button(this, 300, 500, 50, 50, "Highscore"));
 
 
         }
         if (screenChange == 1 && ændreNavnSenere == true){
-            //spil
-
+            //Spil
             buttonList.add(new Button(this, width/3, 750, 333, 50, "X"));
 
         }
 
         if (screenChange == 2 && ændreNavnSenere == true){
-            //help
+            //Help
             buttonList.add(new Button(this, width/3, 750, 333, 50, "Back to main menu"));
         }
         if (screenChange == 3 && ændreNavnSenere == true){
-            //highscore
+            //Highscore
             buttonList.add(new Button(this, width/3, 750, 333, 50, "Back to main menu"));
 
         }
