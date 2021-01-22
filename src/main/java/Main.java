@@ -50,6 +50,7 @@ public class Main extends PApplet {
         background.highScoreMenu();
         buttonsInmenues();
         background.displayButtons(buttonList);
+        System.out.println(buttonList.size());
 
     }
     public void mouseClicked(){
