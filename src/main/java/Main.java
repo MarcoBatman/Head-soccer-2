@@ -39,6 +39,11 @@ public class Main extends PApplet {
         player1.move();
         player2.display();
         player2.move();
+        player1.hitball(ball);
+        player2.hitball(ball);
+        ball.move();
+        ball.display();
+
         
     }
     public void mouseClicked(){
@@ -53,7 +58,7 @@ public class Main extends PApplet {
             buttonList.add(new Button(this, 200, 200, 50,50 ,"Highscore"));
 
 
-        }
+        }}
 
 
     @Override
