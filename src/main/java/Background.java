@@ -28,8 +28,8 @@ PApplet p;
             p.rect(p.width / 2 - 125, 50, 250, 100);
             p.fill(0);
             p.textSize(60);
-            p.text(goal.player1Score, p.width / 2 - 105, 125);
-            p.text(goal.player2Score, p.width / 2 + 70, 125);
+            p.text(goal.player1Score, p.width / 2 - 75, 125);
+            p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
             goal.displayGoal();
         }
@@ -37,6 +37,7 @@ PApplet p;
     public void mainMenu(int screenChange){
         //Main menu hvor man kan gå ind i de andre menuer
         if (screenChange == 0){
+
             p.textSize(30);
             p.textAlign(PConstants.CENTER);
             p.text("Welcome", p.width/2,75);
