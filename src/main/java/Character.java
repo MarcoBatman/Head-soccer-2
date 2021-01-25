@@ -54,8 +54,11 @@ public class Character {
 
     void hitball(Ball ball){
 
-        if(ball.pos.x+10 >= pos.x && ball.pos.x-10<=pos.x+30&&ball.pos.y>=pos.y && ball.pos.y <= pos.y + 100)
-            ball.vel=ball.vel.cross(vel);
+        if(ball.pos.x+10 >= pos.x && ball.pos.x-10<=pos.x+30&&ball.pos.y>=pos.y && ball.pos.y <= pos.y + 100) {
+            PVector temp = new PVector(pos.x+15,pos.y+50);
+            ball.vel.mult(4);
+            ball.vel.rotate(360-PVector.angleBetween(ball.pos,temp));
+        }
     }
 
 

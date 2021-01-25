@@ -32,6 +32,7 @@ public class Main extends PApplet {
     public void draw() {
         clear();
 
+
         background.mainMenu(screenChange);
         background.inGame(goal, screenChange);
         goal.insideGoal(ball);
@@ -47,7 +48,7 @@ public class Main extends PApplet {
         player2.hitball(ball);
         ball.move();
         ball.display();
-        buttonsInmenues();
+      //  buttonsInmenues();
         background.displayButtons(buttonList);
         System.out.println(buttonList.size());
 

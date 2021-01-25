@@ -5,8 +5,8 @@ public class Ball {
     PApplet p;
     PVector pos;
     PVector vel=new PVector(0, (float) 2);
-    PVector forceY=new PVector(0, (float) 0.2);
-    PVector forceX=new PVector((float) 0.2,  0);
+    PVector forceY=new PVector(0, (float) 000.2);
+    PVector forceX=new PVector((float) 00.2,  0);
 
     Ball(PApplet p,int posX, int posY){
         pos = new PVector(posX,posY);
