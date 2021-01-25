@@ -21,7 +21,7 @@ PApplet p;
 
         }
     }
-    public void inGame(Goal goal, int screenChange){
+    public void inGame(Goal goal, int screenChange, Ball ball){
         if (screenChange == 1) {
             p.noStroke();
             p.rect(p.width / 2 - 50, 0, 100, 50);
@@ -32,6 +32,7 @@ PApplet p;
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
             goal.displayGoal();
+            goal.insideGoal(ball);
         }
     }
     public void mainMenu(int screenChange){
