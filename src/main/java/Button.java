@@ -21,12 +21,12 @@ public class Button {
 
     public void drawButton() {
         p.textSize(24);
-        p.fill(0);
-        p.rect(x, y, w, h);
         p.fill(255);
+        p.rect(x, y, w, h);
+        p.fill(255,180,0);
         p.textAlign(PConstants.CENTER);
         p.text(text, x + w / 2, y + h / 2);
-
+        p.fill(255);
     }
 
 

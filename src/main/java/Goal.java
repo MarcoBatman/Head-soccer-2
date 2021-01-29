@@ -33,11 +33,19 @@ PApplet p;
 
     }
     public void insideGoal(Ball ball){
-if (ball.pos.x<70&&ball.pos.y<posY&&ball.pos.y>posY){
-        player2Score++;
+if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
+    player2Score++;
+    ball.pos.x = 500;
+    ball.pos.y = 500;
+    ball.vel.mult(0);
+    System.out.println("MÅÅÅÅL p2");
     }
-if (ball.pos.x>930&&ball.pos.y<posY&&ball.pos.y>posY){
-        player1Score++;
+if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
+    player1Score++;
+    ball.pos.x = 500;
+    ball.pos.y = 500;
+    ball.vel.mult(0);
+    System.out.println("MÅÅÅÅÅL p1");
     }
 
     }

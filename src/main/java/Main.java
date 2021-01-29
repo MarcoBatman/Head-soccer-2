@@ -36,7 +36,7 @@ public class Main extends PApplet {
 
 
         background.mainMenu(screenChange);
-        background.inGame(goal, screenChange);
+        background.inGame(goal, screenChange, ball);
         goal.insideGoal(ball);
         player1.display();
         player1.move();
@@ -62,18 +62,19 @@ public class Main extends PApplet {
                 buttonList.get(i).registerClick(mouseX,mouseY);
             }
             clicked = true;
-            System.out.println("hej");
-
         }
+    }
+    public void mouseReleased(){
+        clicked = false;
     }
     public void buttonsInmenues() {
         if (screenChange == 0 && buttonStopper == true) {
             //Mainmenu
 
-            buttonList.add(new Button(this, 300, 200, 50, 50, "Spil mod ven"));
-            buttonList.add(new Button(this, 600, 200, 50, 50, "Spil mod CPU"));
-            buttonList.add(new Button(this, 300, 500, 50, 50, "Highscore"));
-            buttonList.add(new Button(this, 600, 500, 50, 50, "Controlls"));
+            buttonList.add(new Button(this, 300, 200, 200, 50, "Spil mod ven"));
+            buttonList.add(new Button(this, 600, 200, 200, 50, "Spil mod CPU"));
+            buttonList.add(new Button(this, 300, 500, 200, 50, "Highscore"));
+            buttonList.add(new Button(this, 600, 500, 200, 50, "Controlls"));
 
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
