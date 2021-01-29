@@ -49,9 +49,9 @@ public class Main extends PApplet {
         player2.hitball(ball);
         ball.move();
         ball.display();
-      //  buttonsInmenues();
+        buttonsInmenues();
         background.displayButtons(buttonList);
-        //System.out.println(buttonList.size());
+        System.out.println(buttonList.size());
         screenChanger();
 
 
