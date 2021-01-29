@@ -32,7 +32,7 @@ PApplet p;
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
             goal.displayGoal();
-            goal.insideGoal(ball);
+           // goal.insideGoal(ball);
         }
     }
     public void mainMenu(int screenChange){

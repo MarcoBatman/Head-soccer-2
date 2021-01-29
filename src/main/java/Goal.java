@@ -33,6 +33,7 @@ PApplet p;
 
     }
     public void insideGoal(Ball ball){
+        /*
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     player2Score++;
     ball.pos.x = 500;
@@ -47,7 +48,7 @@ if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.vel.mult(0);
     System.out.println("MÅÅÅÅÅL p1");
     }
-
+*/
     }
     public void moveGoal(){
         if (posY<=400) {
