@@ -117,6 +117,7 @@ public class Main extends PApplet {
     if (screenChange==onScreen&&changedScreen == false){
         if (buttonList.get(nrButton).isButtonPressed()){
             screenChange = toScreen;
+            background.screenChange=toScreen;
             buttonList.clear();
             buttonStopper = true;
             changedScreen = true;
