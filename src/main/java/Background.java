@@ -21,7 +21,7 @@ PApplet p;
 
         }
     }
-    public void inGame(Goal goal, int screenChange, Ball ball){
+    public void inGame(Goal goal, Ball ball, Player player1, Player player2){
         if (screenChange == 1) {
             p.noStroke();
             p.rect(p.width / 2 - 50, 0, 100, 50);
@@ -32,7 +32,17 @@ PApplet p;
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
             goal.displayGoal();
+<<<<<<< Updated upstream
            // goal.insideGoal(ball);
+=======
+            goal.insideGoal(ball,player1,player2);
+            if (goal.player1Score>=5||goal.player2Score==5){
+                screenChange=0;
+                goal.player2Score=0;
+                goal.player1Score=0;
+
+            }
+>>>>>>> Stashed changes
         }
     }
     public void mainMenu(int screenChange){

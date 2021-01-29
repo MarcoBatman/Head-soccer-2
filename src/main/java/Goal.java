@@ -32,23 +32,40 @@ PApplet p;
         p.fill(255);
 
     }
+<<<<<<< Updated upstream
     public void insideGoal(Ball ball){
         /*
+=======
+    public void insideGoal(Ball ball, Player player1, Player player2){
+>>>>>>> Stashed changes
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     player2Score++;
     ball.pos.x = 500;
     ball.pos.y = 500;
     ball.vel.mult(0);
     System.out.println("MÅÅÅÅL p2");
-    }
+    posY=700;
+    player1.pos.x=50;
+    player2.pos.x=950;
+
+}
 if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
     player1Score++;
     ball.pos.x = 500;
     ball.pos.y = 500;
     ball.vel.mult(0);
     System.out.println("MÅÅÅÅÅL p1");
+<<<<<<< Updated upstream
     }
 */
+=======
+    posY=700;
+    player1.pos.x=50;
+    player2.pos.x=950;
+
+}
+
+>>>>>>> Stashed changes
     }
     public void moveGoal(){
         if (posY<=400) {

@@ -36,8 +36,8 @@ public class Main extends PApplet {
 
 
         background.mainMenu(screenChange);
-        background.inGame(goal, screenChange, ball);
-        goal.insideGoal(ball);
+        background.inGame(goal, ball,player1,player2);
+        goal.insideGoal(ball, player1, player2);
         player1.display();
         player1.move();
         player2.display();
