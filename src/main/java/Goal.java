@@ -59,7 +59,7 @@ if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
 
 }
 
-    
+
     public void moveGoal(){
         if (posY<=400) {
             vel = (float) 0.5;

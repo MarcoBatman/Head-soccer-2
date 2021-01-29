@@ -32,9 +32,6 @@ PApplet p;
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
             goal.displayGoal();
-<<<<<<< Updated upstream
-           // goal.insideGoal(ball);
-=======
             goal.insideGoal(ball,player1,player2);
             if (goal.player1Score>=5||goal.player2Score==5){
                 screenChange=0;
@@ -42,7 +39,6 @@ PApplet p;
                 goal.player1Score=0;
 
             }
->>>>>>> Stashed changes
         }
     }
     public void mainMenu(int screenChange){
