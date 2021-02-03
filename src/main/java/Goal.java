@@ -51,11 +51,12 @@ if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.y = 500;
     ball.vel.mult(0);
     System.out.println("MÅÅÅÅÅL p1");
-    }
-
     posY=700;
     player1.pos.x=50;
     player2.pos.x=950;
+    }
+
+
 
 }
 
