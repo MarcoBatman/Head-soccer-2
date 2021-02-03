@@ -56,8 +56,8 @@ public class Character {
 
         if(ball.pos.x+10 >= pos.x && ball.pos.x-10<=pos.x+30&&ball.pos.y>=pos.y && ball.pos.y <= pos.y + 100) {
             PVector temp = new PVector(pos.x+15,pos.y+50);
-            ball.vel.mult(4);
-            ball.vel.rotate(360-PVector.angleBetween(ball.pos,temp));
+            ball.vel.mult(2);
+            ball.vel.rotate(p.acos(ball.vel.x*vel.x+ball.vel.y*vel.y)/((p.sqrt(ball.vel.x*ball.vel.x+ball.vel.y*ball.vel.y)*(p.sqrt(vel.x*vel.x+vel.y*vel.y)))));
         }
     }
 

@@ -33,7 +33,7 @@ public class Main extends PApplet {
     @Override
     public void draw() {
         clear();
-
+        println(ball.pos);
 
         background.mainMenu(screenChange);
         background.inGame(goal, ball,player1,player2);
@@ -51,7 +51,7 @@ public class Main extends PApplet {
         ball.display();
         buttonsInmenues();
         background.displayButtons(buttonList);
-        System.out.println(buttonList.size());
+        //System.out.println(buttonList.size());
         screenChanger();
 
 

@@ -33,7 +33,8 @@ PApplet p;
 
     }
 
-    public void insideGoal(Ball ball, Player player1, Player player2){
+   public void insideGoal(Ball ball, Player player1, Player player2){
+         /*
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     player2Score++;
     ball.pos.x = 500;
@@ -57,7 +58,7 @@ if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
     }
 
 
-
+*/
 }
 
 
