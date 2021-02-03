@@ -33,25 +33,18 @@ public class Main extends PApplet {
     @Override
     public void draw() {
         clear();
-        println(ball.pos);
+
 
         background.mainMenu(screenChange);
         background.inGame(goal, ball,player1,player2);
         goal.insideGoal(ball, player1, player2);
-        player1.display();
-        player1.move();
-        player2.display();
-        player2.move();
         background.helpMenu(screenChange);
         background.highScoreMenu(screenChange);
-
         player1.hitball(ball);
         player2.hitball(ball);
-        ball.move();
-        ball.display();
         buttonsInmenues();
         background.displayButtons(buttonList);
-        //System.out.println(buttonList.size());
+
         screenChanger();
 
 
@@ -71,18 +64,19 @@ public class Main extends PApplet {
         if (screenChange == 0 && buttonStopper == true) {
             //Mainmenu
 
-            buttonList.add(new Button(this, 300, 200, 200, 50, "Spil mod ven"));
+            buttonList.add(new Button(this, 200, 200, 200, 50, "Spil mod ven"));
             buttonList.add(new Button(this, 600, 200, 200, 50, "Spil mod CPU"));
-            buttonList.add(new Button(this, 300, 500, 200, 50, "Highscore"));
+            buttonList.add(new Button(this, 200, 500, 200, 50, "Highscore"));
             buttonList.add(new Button(this, 600, 500, 200, 50, "Controlls"));
 
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
 
         }
-        if (screenChange == 1 && buttonStopper == true){
-            //Spil
+        if (screenChange == 1 ||screenChange==5 && buttonStopper == true){
+            //Spil (mod ven og CPU)
             buttonList.add(new Button(this, 50, 50, 50, 50, "X"));
+
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
         }
@@ -104,10 +98,11 @@ public class Main extends PApplet {
 
     public void screenChanger(){
         buttonEffect(0,0,1); //Fra main menu til spil mod ven
-        buttonEffect(1,0,1); //Fra main menu til spil mod CPU
+        buttonEffect(1,0,5); //Fra main menu til spil mod CPU
         buttonEffect(2,0,2); //Fra main menu til kontrolls menuen
         buttonEffect(3,0,3); //Fra main menu til highscore
         buttonEffect(0,1,0); //Fra spillet til main menu
+        buttonEffect(0,5,0); //Fra spillet til main menu
         buttonEffect(0,2,0); //Fra kontrolls menuen til main menu
         buttonEffect(0,3,0); //Fra highscore til main menu
         changedScreen = false;
@@ -121,6 +116,8 @@ public class Main extends PApplet {
             buttonList.clear();
             buttonStopper = true;
             changedScreen = true;
+            goal.player2Score = 0;
+            goal.player1Score = 0;
         }
     }
     }
