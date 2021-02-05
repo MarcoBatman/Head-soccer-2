@@ -89,24 +89,23 @@ public class Background {
 
         }
     }
+
     public void nextCPUBattle(Goal goal){
 
             if (p.mouseX >p.width/30+50&&p.mouseX<p.width/3+300&&p.mouseY>325&&p.mouseY<400&&goal.player1Score==5){
                 screenChange=5;
                 cpulvl++;
                 System.out.println(cpulvl);
+                highscoreCPU=cpulvl;
+
             }
         }
-
-
         public void mainMenu ( int screenChange){
             //Main menu hvor man kan gå ind i de andre menuer
             if (screenChange == 0) {
-
                 p.textSize(30);
                 p.textAlign(PConstants.CENTER);
                 p.text("Welcome", p.width / 2, 75);
-
             }
         }
         public void highScoreMenu ( int screenChange){
@@ -115,7 +114,7 @@ public class Background {
                 p.textSize(32);
                 p.textAlign(PConstants.CENTER);
                 p.text("Highscore for this sesion", p.width / 2, 150);
-                // p.text(highscore,p.width/2,250);
+                p.text(highscoreCPU,p.width/2,250);
             }
         }
         public void helpMenu ( int screenChange){

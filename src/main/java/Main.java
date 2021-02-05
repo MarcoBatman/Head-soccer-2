@@ -44,11 +44,11 @@ public class Main extends PApplet {
         player2.hitball(ball);
         buttonsInmenues();
         background.displayButtons(buttonList);
-
         screenChanger();
 
 
     }
+
     public void mouseClicked(){
         if (clicked == false){
             for (int i = 0; i <buttonList.size();i++){
@@ -57,7 +57,7 @@ public class Main extends PApplet {
             clicked = true;
         }
         background.nextCPUBattle(goal);
-        goal.player1Score++;
+        goal.player2Score++;
     }
     public void mouseReleased(){
         clicked = false;
