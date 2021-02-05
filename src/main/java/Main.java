@@ -56,6 +56,8 @@ public class Main extends PApplet {
             }
             clicked = true;
         }
+        background.nextCPUBattle(goal);
+        goal.player1Score++;
     }
     public void mouseReleased(){
         clicked = false;
@@ -79,7 +81,9 @@ public class Main extends PApplet {
 
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
+
         }
+
 
         if (screenChange == 2 && buttonStopper == true){
             //Help
@@ -101,10 +105,12 @@ public class Main extends PApplet {
         buttonEffect(1,0,5); //Fra main menu til spil mod CPU
         buttonEffect(2,0,2); //Fra main menu til kontrolls menuen
         buttonEffect(3,0,3); //Fra main menu til highscore
-        buttonEffect(0,1,0); //Fra spillet til main menu
-        buttonEffect(0,5,0); //Fra spillet til main menu
+        buttonEffect(0,1,0); //Fra spillet (2 player) til main menu
+        buttonEffect(0,5,0); //Fra spillet (CPU) til main menu
         buttonEffect(0,2,0); //Fra kontrolls menuen til main menu
         buttonEffect(0,3,0); //Fra highscore til main menu
+        buttonEffect(1, 8, 5); //Fra CPU til CPU igen (næste bane)
+
         changedScreen = false;
     }
 
