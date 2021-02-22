@@ -12,7 +12,7 @@ public class Main extends PApplet {
     boolean changedScreen = false;
     boolean clicked = false;
 
-
+    CPU cpu = new CPU(this,950,height,3);
     Player player1 = new Player(this,50,height,1);
     Player player2 = new Player(this,950,height,2);
     Goal goal= new Goal(this);
@@ -36,12 +36,19 @@ public class Main extends PApplet {
 
 
         background.mainMenu(screenChange);
+        if(screenChange==1)
         background.inGame(goal, ball,player1,player2);
+        if(screenChange==5) {
+            cpu.setMove(ball);
+            background.inGame(goal, ball, player1, cpu);
+        }
         goal.insideGoal(ball, player1, player2);
+        goal.insideGoal(ball,player1,cpu);
         background.helpMenu(screenChange);
         background.highScoreMenu(screenChange);
         player1.hitball(ball);
         player2.hitball(ball);
+        cpu.hitball(ball);
         buttonsInmenues();
         background.displayButtons(buttonList);
         screenChanger();

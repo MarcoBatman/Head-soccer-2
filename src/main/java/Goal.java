@@ -33,7 +33,7 @@ PApplet p;
 
     }
 
-   public void insideGoal(Ball ball, Player player1, Player player2){
+   public void insideGoal(Ball ball, Character player1, Character player2){
          /*
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
@@ -41,7 +41,10 @@ if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.x = 500;
     ball.pos.y = 500;
     ball.vel.mult(0);
+    if(player2.player==2)
     System.out.println("MÅÅÅÅL p2");
+    if(player2.player==3)
+    System.out.println("MÅÅÅÅL CPU");
     player1.pos.x=50;
     player2.pos.x=950;
 

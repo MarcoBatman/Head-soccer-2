@@ -24,7 +24,7 @@ public class Background {
         }
     }
 
-    public void inGame(Goal goal, Ball ball, Player player1, Player player2) {
+    public void inGame(Goal goal, Ball ball, Character player1, Character player2) {
         if (screenChange == 1 || screenChange == 5) {
 
             p.noStroke();
@@ -76,10 +76,11 @@ public class Background {
 
                 player1.display();
                 player1.move();
+                player2.display();
+                player2.move();
                 ball.move();
                 ball.display();
-                //cpu.display();
-                //cpu.move();
+
                 p.rect(880,15,95,50);
                 p.textSize(16);
                 p.fill(255, 180, 0);
