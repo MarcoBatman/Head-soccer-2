@@ -35,19 +35,19 @@ public class Background {
             p.text(goal.player1Score, p.width / 2 - 75, 125);
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
+            goal.displayGoal();
+            goal.insideGoal(ball, player1, player2);
             if (screenChange == 1) {
                 //Versus buddy
-                if (goal.player2Score < 5 && goal.player1Score < 5) {
-                    goal.displayGoal();
-                    goal.insideGoal(ball, player1, player2);
-                }
 
-                if (goal.player1Score == 5) {
+
+
+                if (goal.player1Score >= 5&& goal.player1Score>=goal.player2Score+2) {
                     p.text("Player 1 wins!\nClick on the X to get\nback to the main menu", p.width / 2, p.height / 2);
                     goal.posY = 700;
 
                 }
-                if (goal.player2Score == 5) {
+                if (goal.player2Score >= 5&& goal.player2Score>=goal.player1Score+2) {
                     p.text("Player 2 wins!\nClick on the X to get\nback to the main menu", p.width / 2, p.height / 2);
                     goal.posY = 700;
 
@@ -61,7 +61,7 @@ public class Background {
             }
             if (screenChange == 5) {
                 //Versus CPU
-                if (goal.player1Score == 5) {
+                if (goal.player1Score >= 5&& goal.player1Score>=goal.player2Score+2) {
                     p.textSize(36);
                     p.text("Player 1 wins!\nClick on Play versus new CPU to\nfight versus a new CPU\n that is even harder", p.width / 2, p.height / 2);
                     p.rect(p.width / 3 + 50, 325, 250, 75);
@@ -70,7 +70,7 @@ public class Background {
                     p.text("Play versus new CPU", p.width / 2 + 10, 375);
                     p.fill(255);
                 }
-                if(goal.player2Score == 5){
+                if (goal.player2Score >= 5&& goal.player2Score>=goal.player1Score+2) {
                     p.textSize(36);
                     p.text("You lose.\nClick on Highscore to see\nhow far you made it!",p.width/2,p.height/2);
                     p.rect(p.width / 3 + 50, 325, 250, 75);
@@ -80,10 +80,8 @@ public class Background {
                     p.fill(255);
 
                 }
-                if (goal.player1Score < 5) {
-                    goal.displayGoal();
-                    goal.insideGoal(ball, player1, player2);
-                }
+
+
 
                 player1.display();
                 player1.move();
@@ -92,7 +90,7 @@ public class Background {
                 ball.move();
                 ball.display();
 
-                p.rect(880,15,95,50);
+                p.rect(1380,15,95,50);
                 p.textSize(16);
                 p.fill(255, 180, 0);
                 p.text("CPU Level\n"+cpulvl,1425,33);
