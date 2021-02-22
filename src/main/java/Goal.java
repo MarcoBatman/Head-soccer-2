@@ -20,13 +20,13 @@ PApplet p;
         p.rect(0,posY,70,20);
 
         //Spiller 2 mål
-        p.rect(1000,posY,-10,300);
-        p.rect(1000,posY,-70,-20);
-        p.rect(1000,posY+300,-70,-10);
+        p.rect(1500,posY,-10,300);
+        p.rect(1500,posY,-70,-20);
+        p.rect(1500,posY+300,-70,-10);
 
         //Pedestaler til målene
         p.fill(118,118,118);
-        p.rect(1000,posY+300,-70,400);
+        p.rect(1500,posY+300,-70,400);
         p.rect(0,posY+300,70,400);
         moveGoal();
         p.fill(255);

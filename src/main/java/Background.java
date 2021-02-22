@@ -95,7 +95,7 @@ public class Background {
                 p.rect(880,15,95,50);
                 p.textSize(16);
                 p.fill(255, 180, 0);
-                p.text("CPU Level\n"+cpulvl,925,33);
+                p.text("CPU Level\n"+cpulvl,1425,33);
 
             }
 
@@ -130,7 +130,8 @@ public class Background {
                 p.textSize(32);
                 p.textAlign(PConstants.CENTER);
                 p.text("Highscore for this sesion", p.width / 2, 150);
-                p.text(highscoreCPU,p.width/2,250);
+                p.textSize(50);
+                p.text(highscoreCPU,p.width/2,333);
             }
         }
         public void helpMenu ( int screenChange){
@@ -139,11 +140,11 @@ public class Background {
                 p.textSize(32);
                 p.textAlign(PConstants.CENTER);
                 p.text("Controlls", p.width / 2, 150);
-                p.text("Player 1", 150, 200);
-                p.text("Player 2", 850, 200);
-                p.textSize(24);
-                p.text("Jump = W\nMove left = A\nMove right = D\nKick = Spacebar", 150, 275);
-                p.text("Jump = ^\nMove left = <-\nMove right = ->\nKick = Cant huske", 850, 275);
+                p.text("Player 1", 150, 275);
+                p.text("Player 2", 1350, 275);
+                p.textSize(32);
+                p.text("Jump = W\nMove left = A\nMove right = D\nKick = T", 150, 325);
+                p.text("Jump = ^\nMove left = <-\nMove right = ->\nKick = -", 1350, 325);
 
             }
         }

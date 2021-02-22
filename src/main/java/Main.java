@@ -12,9 +12,9 @@ public class Main extends PApplet {
     boolean changedScreen = false;
     boolean clicked = false;
 
-    CPU cpu = new CPU(this,950,height,3);
+    CPU cpu = new CPU(this,1450,height,3);
     Player player1 = new Player(this,50,height,1);
-    Player player2 = new Player(this,950,height,2);
+    Player player2 = new Player(this,1450,height,2);
     Goal goal= new Goal(this);
     Ball ball = new Ball(this,500,500);
 
@@ -22,7 +22,7 @@ public class Main extends PApplet {
     @Override
     public void settings() {
         super.settings();
-        size(1000,1000);
+        size(1500,1000);
     }
 
     @Override
@@ -74,10 +74,10 @@ public class Main extends PApplet {
         if (screenChange == 0 && buttonStopper == true) {
             //Mainmenu
 
-            buttonList.add(new Button(this, 200, 200, 200, 50, "Spil mod ven"));
-            buttonList.add(new Button(this, 600, 200, 200, 50, "Spil mod CPU"));
-            buttonList.add(new Button(this, 200, 500, 200, 50, "Highscore"));
-            buttonList.add(new Button(this, 600, 500, 200, 50, "Controlls"));
+            buttonList.add(new Button(this, 500, 200, 200, 50, "Spil mod ven"));
+            buttonList.add(new Button(this, 750, 200, 200, 50, "Spil mod CPU"));
+            buttonList.add(new Button(this, 500, 500, 200, 50, "Highscore"));
+            buttonList.add(new Button(this, 750, 500, 200, 50, "Controlls"));
 
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
@@ -95,13 +95,13 @@ public class Main extends PApplet {
 
         if (screenChange == 2 && buttonStopper == true){
             //Help
-            buttonList.add(new Button(this, width/3, 750, 333, 50, "Back to main menu"));
+            buttonList.add(new Button(this, width/3+75, 750, 333, 50, "Back to main menu"));
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
         }
         if (screenChange == 3 && buttonStopper == true){
             //Highscore
-            buttonList.add(new Button(this, width/3, 750, 333, 50, "Back to main menu"));
+            buttonList.add(new Button(this, width/3+75, 750, 333, 50, "Back to main menu"));
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
         }
