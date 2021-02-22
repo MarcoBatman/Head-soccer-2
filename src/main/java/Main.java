@@ -57,7 +57,7 @@ public class Main extends PApplet {
             clicked = true;
         }
         background.nextCPUBattle(goal);
-        goal.player2Score++;
+        goal.player1Score++;
     }
     public void mouseReleased(){
         clicked = false;

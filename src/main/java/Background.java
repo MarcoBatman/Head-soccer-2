@@ -9,7 +9,7 @@ public class Background {
     int screenChange = 0;
     ArrayList<Button> buttonList;
     int highscoreCPU;
-    int cpulvl;
+    int cpulvl = 1;
 
     Background(PApplet p) {
         this.p = p;
@@ -62,12 +62,23 @@ public class Background {
             if (screenChange == 5) {
                 //Versus CPU
                 if (goal.player1Score == 5) {
+                    p.textSize(36);
                     p.text("Player 1 wins!\nClick on Play versus new CPU to\nfight versus a new CPU\n that is even harder", p.width / 2, p.height / 2);
                     p.rect(p.width / 3 + 50, 325, 250, 75);
                     p.textSize(24);
                     p.fill(255, 180, 0);
                     p.text("Play versus new CPU", p.width / 2 + 10, 375);
                     p.fill(255);
+                }
+                if(goal.player2Score == 5){
+                    p.textSize(36);
+                    p.text("You lose.\nClick on Highscore to see\nhow far you made it!",p.width/2,p.height/2);
+                    p.rect(p.width / 3 + 50, 325, 250, 75);
+                    p.fill(255, 180, 0);
+                    p.textSize(24);
+                    p.text("To highscore",p.width/2+10,375);
+                    p.fill(255);
+
                 }
                 if (goal.player1Score < 5) {
                     goal.displayGoal();
@@ -90,16 +101,20 @@ public class Background {
         }
     }
 
-    public void nextCPUBattle(Goal goal){
+    public void nextCPUBattle(Goal goal) {
 
-            if (p.mouseX >p.width/30+50&&p.mouseX<p.width/3+300&&p.mouseY>325&&p.mouseY<400&&goal.player1Score==5){
-                screenChange=5;
-                cpulvl++;
-                System.out.println(cpulvl);
-                highscoreCPU=cpulvl;
+        if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player1Score == 5) {
+            screenChange = 5;
+            cpulvl++;
+            System.out.println(cpulvl);
+            highscoreCPU = cpulvl;
 
-            }
         }
+        if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player2Score == 5) {
+            screenChange = 2;
+
+        }
+    }
         public void mainMenu ( int screenChange){
             //Main menu hvor man kan gå ind i de andre menuer
             if (screenChange == 0) {
