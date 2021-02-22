@@ -102,19 +102,19 @@ public class Background {
         }
     }
 
-    public void nextCPUBattle(Goal goal) {
+    public int nextCPUBattle(Goal goal) {
 
         if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player1Score == 5) {
             screenChange = 5;
             cpulvl++;
             System.out.println(cpulvl);
+            if(cpulvl>highscoreCPU)
             highscoreCPU = cpulvl;
-
         }
         if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player2Score == 5) {
             screenChange = 2;
-
         }
+        return screenChange;
     }
         public void mainMenu ( int screenChange){
             //Main menu hvor man kan gå ind i de andre menuer
