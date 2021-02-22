@@ -63,7 +63,7 @@ public class Main extends PApplet {
             }
             clicked = true;
         }
-        background.nextCPUBattle(goal);
+        screenChange = background.nextCPUBattle(goal);
         goal.player1Score++;
         System.out.println(screenChange);
     }
