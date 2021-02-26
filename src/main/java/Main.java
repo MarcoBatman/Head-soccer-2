@@ -12,9 +12,9 @@ public class Main extends PApplet {
     boolean changedScreen = false;
     boolean clicked = false;
 
-    CPU cpu = new CPU(this,1450,height,3);
-    Player player1 = new Player(this,50,height,1);
-    Player player2 = new Player(this,1450,height,2);
+    CPU cpu = new CPU(this,1450,1400,3);
+    Player player1 = new Player(this,50,1400,1);
+    Player player2 = new Player(this,1450,1400,2);
     Goal goal= new Goal(this);
     Ball ball = new Ball(this,500,500);
 
@@ -66,6 +66,11 @@ public class Main extends PApplet {
         screenChange = background.nextCPUBattle(goal);
         goal.player1Score++;
         System.out.println(screenChange);
+        if (screenChange!=5&&screenChange!=1) {
+            player1.pos.x = 50;
+            player2.pos.x = 1450;
+            cpu.pos.x=1450;
+        }
     }
     public void mouseReleased(){
         clicked = false;
@@ -75,9 +80,9 @@ public class Main extends PApplet {
             //Mainmenu
 
             buttonList.add(new Button(this, 500, 200, 200, 50, "Spil mod ven"));
-            buttonList.add(new Button(this, 750, 200, 200, 50, "Spil mod CPU"));
+            buttonList.add(new Button(this, 800, 200, 200, 50, "Spil mod CPU"));
             buttonList.add(new Button(this, 500, 500, 200, 50, "Highscore"));
-            buttonList.add(new Button(this, 750, 500, 200, 50, "Controlls"));
+            buttonList.add(new Button(this, 800, 500, 200, 50, "Controlls"));
 
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;

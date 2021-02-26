@@ -28,6 +28,7 @@ public class Background {
         if (screenChange == 1 || screenChange == 5) {
 
             p.noStroke();
+            //scoreboard
             p.rect(p.width / 2 - 50, 0, 100, 50);
             p.rect(p.width / 2 - 125, 50, 250, 100);
             p.fill(0);
@@ -35,6 +36,7 @@ public class Background {
             p.text(goal.player1Score, p.width / 2 - 75, 125);
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
+
             goal.displayGoal();
             goal.insideGoal(ball, player1, player2);
             if (screenChange == 1) {
@@ -52,6 +54,7 @@ public class Background {
                     goal.posY = 700;
 
                 }
+
                 player1.display();
                 player1.move();
                 player2.display();
@@ -138,11 +141,11 @@ public class Background {
                 p.textSize(32);
                 p.textAlign(PConstants.CENTER);
                 p.text("Controlls", p.width / 2, 150);
-                p.text("Player 1", 150, 275);
-                p.text("Player 2", 1350, 275);
+                p.text("Player 1", 350, 325);
+                p.text("Player 2", 1150, 325);
                 p.textSize(32);
-                p.text("Jump = W\nMove left = A\nMove right = D\nKick = T", 150, 325);
-                p.text("Jump = ^\nMove left = <-\nMove right = ->\nKick = -", 1350, 325);
+                p.text("Jump = W\nMove left = A\nMove right = D\nKick = T", 350, 375);
+                p.text("Jump = ^\nMove left = <-\nMove right = ->\nKick = -", 1150, 375);
 
             }
         }
