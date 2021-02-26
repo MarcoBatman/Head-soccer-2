@@ -24,9 +24,9 @@ public class Background {
         }
     }
 
-    public void inGame(Goal goal, Ball ball, Character player1, Character player2) {
+    public void inGame(Goal goal, Ball ball, Character player1, Character player2,ImageLoader imageLoader) {
         if (screenChange == 1 || screenChange == 5) {
-
+            p.image(imageLoader.wall,0,0);
             p.noStroke();
             p.rect(p.width / 2 - 50, 0, 100, 50);
             p.rect(p.width / 2 - 125, 50, 250, 100);

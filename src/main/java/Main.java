@@ -11,7 +11,7 @@ public class Main extends PApplet {
     boolean buttonStopper = true;
     boolean changedScreen = false;
     boolean clicked = false;
-
+    ImageLoader imageLoader = new ImageLoader(this);
     CPU cpu = new CPU(this,1450,height,3);
     Player player1 = new Player(this,50,height,1);
     Player player2 = new Player(this,1450,height,2);
@@ -28,6 +28,7 @@ public class Main extends PApplet {
     @Override
     public void setup() {
         super.setup();
+        imageLoader.loadimage();
     }
 
     @Override
@@ -37,10 +38,10 @@ public class Main extends PApplet {
 
         background.mainMenu(screenChange);
         if(screenChange==1)
-        background.inGame(goal, ball,player1,player2);
+        background.inGame(goal, ball,player1,player2,imageLoader);
         if(screenChange==5) {
         cpu.setMove(ball);
-        background.inGame(goal, ball, player1, cpu);
+        background.inGame(goal, ball, player1, cpu,imageLoader);
         }
         goal.insideGoal(ball, player1, player2);
         goal.insideGoal(ball,player1,cpu);
