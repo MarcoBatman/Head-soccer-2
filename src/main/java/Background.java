@@ -42,8 +42,6 @@ public class Background {
             if (screenChange == 1) {
                 //Versus buddy
 
-
-
                 if (goal.player1Score >= 5&& goal.player1Score>=goal.player2Score+2) {
                     p.text("Player 1 wins!\nClick on the X to get\nback to the main menu", p.width / 2, p.height / 2);
                     goal.posY = 700;
@@ -67,7 +65,7 @@ public class Background {
                 if (goal.player1Score >= 5&& goal.player1Score>=goal.player2Score+2) {
                     p.textSize(36);
                     p.text("Player 1 wins!\nClick on Play versus new CPU to\nfight versus a new CPU\n that is even harder", p.width / 2, p.height / 2);
-                    p.rect(p.width / 3 + 50, 325, 250, 75);
+                    p.rect(p.width / 2 - 115, 325, 250, 75);
                     p.textSize(24);
                     p.fill(255, 180, 0);
                     p.text("Play versus new CPU", p.width / 2 + 10, 375);
@@ -76,7 +74,7 @@ public class Background {
                 if (goal.player2Score >= 5&& goal.player2Score>=goal.player1Score+2) {
                     p.textSize(36);
                     p.text("You lose.\nClick on Highscore to see\nhow far you made it!",p.width/2,p.height/2);
-                    p.rect(p.width / 3 + 50, 325, 250, 75);
+                    p.rect(p.width / 2 - 115, 325, 250, 75);
                     p.fill(255, 180, 0);
                     p.textSize(24);
                     p.text("To highscore",p.width/2+10,375);
