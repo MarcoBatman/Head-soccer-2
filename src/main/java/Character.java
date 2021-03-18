@@ -18,7 +18,7 @@ public class Character {
 
     void move() {
 
-        if (up&&pos.y==p.height-100)
+        if (up&&pos.y==p.height)
             vel.y = -5;
         if (left)
             vel.x = -5;
@@ -41,9 +41,9 @@ public class Character {
             pos.x = p.width;
         }
 
-        if (pos.y > p.height-100){
+        if (pos.y > p.height){
             vel.y = 0;
-        pos.y = p.height - 100;}
+        pos.y = p.height ;}
 
     }
 
@@ -58,11 +58,40 @@ public class Character {
 
     void hitball(Ball ball){
 
-        if(ball.pos.x+10 >= pos.x && ball.pos.x-10<=pos.x+30&&ball.pos.y>=pos.y && ball.pos.y <= pos.y + 100) {
-            PVector temp = new PVector(pos.x+15,pos.y+50);
-            ball.vel.mult(2);
-            ball.vel.rotate(p.acos(ball.vel.x*vel.x+ball.vel.y*vel.y)/((p.sqrt(ball.vel.x*ball.vel.x+ball.vel.y*ball.vel.y)*(p.sqrt(vel.x*vel.x+vel.y*vel.y)))));
+        float[] sizelist = new float[3];
+        sizelist[0] = 100;
+        sizelist[1] = 50;
+        sizelist[2] = 40;
+        PVector p3;
+        PVector p1 = new PVector(pos.x,pos.y);
+        PVector p2 = new PVector(pos.x,pos.y-50);
+        if(playernr==1) {
+           p3 = new PVector(pos.x + 30, pos.y + 30);
+        }else{
+
+             p3 = new PVector(pos.x-30,pos.y+30);
         }
+        PVector[] poslist = new PVector[3];
+        poslist[0] = p1;
+        poslist[1] = p2;
+        poslist[2] = p3;
+
+        for (int i = 0 ; i < 3; i++) {
+            float distance = p.dist(poslist[i].x, poslist[i].y, ball.pos.x, ball.pos.y);
+            if (distance < sizelist[i]/2 ) {
+                float X = (float) (poslist[i].x + 2.5 * 10 + sizelist[i]);
+                float Y = (float) (poslist[i].y + 2.5 * 10 + sizelist[i]);
+                float ax = (float) ((X - ball.pos.x) * 0.05);
+                float ay = (float) ((Y - ball.pos.y) * 0.05);
+                if(ball.pos.x>pos.x){
+                ball.vel.x += ax;
+                ball.vel.y += ay;}
+                if(ball.pos.x<pos.x){
+                    ball.vel.x -= ax;
+                    ball.vel.y -= ay;}
+            }
+        }
+
     }
 
 
