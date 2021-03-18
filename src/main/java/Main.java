@@ -20,7 +20,7 @@ public class Main extends PApplet {
     ImageLoader imageLoader = new ImageLoader(this);
 
     Goal goal= new Goal(this);
-    Ball ball = new Ball(this,500,500);
+    Ball ball = new Ball(this,width/2,500);
 
 
     @Override
@@ -75,6 +75,8 @@ public class Main extends PApplet {
             player1.pos.x = 50;
             player2.pos.x = 1450;
             cpu.pos.x=1450;
+            ball.pos.x=width/2;
+            ball.pos.y=500;
         }
     }
     public void mouseReleased(){
@@ -115,6 +117,14 @@ public class Main extends PApplet {
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;
         }
+        if (screenChange == 6){
+            //Næste CPU battle
+            buttonList.add(new Button(this, width/2-115,325 , 250, 75, "Start the next level"));
+
+            //Gør så den kun tegner knapperne på skærmen 1 gang
+            buttonStopper= false;
+
+        }
 
     }
 
@@ -127,8 +137,8 @@ public class Main extends PApplet {
         buttonEffect(0,5,0); //Fra spillet (CPU) til main menu
         buttonEffect(0,2,0); //Fra kontrolls menuen til main menu
         buttonEffect(0,3,0); //Fra highscore til main menu
-        buttonEffect(1, 8, 5); //Fra CPU til CPU igen (næste bane)
-
+        buttonEffect(0, 6, 0); //Fra næste bane menu til main menu
+        buttonEffect(1,6,5); //Fra CPU til CPU igen (næste bane)
         changedScreen = false;
     }
 

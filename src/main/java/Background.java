@@ -104,7 +104,7 @@ public class Background {
     public int nextCPUBattle(Goal goal) {
 
         if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player1Score == 5) {
-            screenChange = 5;
+            screenChange = 6;
             cpulvl++;
             System.out.println(cpulvl);
             if(cpulvl>highscoreCPU)
