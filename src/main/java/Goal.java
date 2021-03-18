@@ -38,7 +38,7 @@ PApplet p;
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
     player2Score++;
-    ball.pos.x = 500;
+    ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
     if(player2.playernr==2)
@@ -49,10 +49,10 @@ if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     player2.pos.x=950;
 
 }
-if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
+if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
     player1Score++;
-    ball.pos.x = 500;
+    ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
     System.out.println("MÅÅÅÅÅL p1");
