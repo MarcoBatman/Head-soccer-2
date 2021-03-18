@@ -34,7 +34,7 @@ PApplet p;
     }
 
    public void insideGoal(Ball ball, Character player1, Character player2){
-
+/*
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
     player2Score++;
@@ -61,7 +61,7 @@ if (ball.pos.x>930&&ball.pos.y<posY+300&&ball.pos.y>posY){
     }
 
 
-
+*/
 }
 
 
