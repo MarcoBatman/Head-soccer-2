@@ -9,11 +9,19 @@ public class Character {
     PVector resistanceY = new PVector((float) 0, (float) 0.3);
     boolean up, down, left, right;
     int playernr;
+    float[] sizelist = new float[3];
+    PVector p3;
+    PVector p1;
+    PVector p2;
+
 
     Character(PApplet p, int posX, int posY, int player) {
         this.p = p;
         this.pos = new PVector(posX, posY);
         this.playernr = player;
+        sizelist[0] = 100;
+        sizelist[1] = 50;
+        sizelist[2] = 40;
     }
 
     void move() {
@@ -57,14 +65,9 @@ public class Character {
     }
 
     void hitball(Ball ball){
-
-        float[] sizelist = new float[3];
-        sizelist[0] = 100;
-        sizelist[1] = 50;
-        sizelist[2] = 40;
-        PVector p3;
-        PVector p1 = new PVector(pos.x,pos.y);
-        PVector p2 = new PVector(pos.x,pos.y-50);
+        
+        p1 = new PVector(pos.x,pos.y);
+        p2= new PVector(pos.x,pos.y-50);
         if(playernr==1) {
            p3 = new PVector(pos.x + 30, pos.y + 30);
         }else{
