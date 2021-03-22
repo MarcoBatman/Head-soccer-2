@@ -31,6 +31,38 @@ public class CPU extends Character {
         }
 
     }
+   /* public void move (Background background) {
+
+        if (up&&pos.y==p.height)
+            vel.y = -5;
+        if (left)
+            vel.x = -background.cpulvl;
+        if (right)
+            vel.x = background.cpulvl;
+        if (vel.x > 0)
+            vel.add(resistanceX);
+        if (vel.x < 0)
+            vel.sub(resistanceX);
+
+        vel.add(resistanceY);
+        pos.add(vel);
+        if (pos.x <= 0) {
+            vel.x = 0;
+            pos.x = 0;
+        }
+
+        if (pos.x >= p.width) {
+            vel.x = 0;
+            pos.x = p.width;
+        }
+
+        if (pos.y > p.height){
+            vel.y = 0;
+            pos.y = p.height ;}
+
+    }
+
+    */
 }
 
 

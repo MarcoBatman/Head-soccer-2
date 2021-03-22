@@ -45,6 +45,7 @@ public class Main extends PApplet {
         background.inGame(goal, ball,player1,player2,imageLoader);
         if(screenChange==5) {
         cpu.setMove(ball);
+       // cpu.move(background);
         background.inGame(goal, ball, player1, cpu,imageLoader);
         }
         goal.insideGoal(ball, player1, player2);
