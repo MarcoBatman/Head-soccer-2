@@ -59,7 +59,7 @@ public class Character {
         p.ellipse(pos.x, pos.y, 80, 80);
         p.ellipse(pos.x,pos.y-50,30,30);
         if(playernr==1){
-        p.ellipse(pos.x+30,pos.y+30,20,20);}
+        p.ellipse(pos.x+30,pos.y+30,20,20); }
         if(playernr==2||playernr==3){
         p.ellipse(pos.x-30,pos.y+30,20,20);}
     }

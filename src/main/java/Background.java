@@ -7,7 +7,7 @@ public class Background {
 
     PApplet p;
     int screenChange = 0;
-    ArrayList<Button> buttonList;
+    ArrayList<Button> buttonList; // Hvad gør den her?
     int highscoreCPU;
     int cpulvl = 1;
 
