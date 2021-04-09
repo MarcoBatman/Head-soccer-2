@@ -21,6 +21,7 @@ if(playernr==1)
 
             return down = b;
 
+
             case +'A':
 
                 return left = b;
@@ -28,7 +29,9 @@ if(playernr==1)
             case +'D':
 
                 return right = b;
+            case +'T':
 
+                return kick = b;
             default:
                 return b;
         }else{
@@ -49,7 +52,9 @@ if(playernr==1)
 
                 case 39:
                     return right = b;
+                case +'-':
 
+                    return kick = b;
                 default:
                     return b;
             }}else

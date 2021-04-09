@@ -54,9 +54,12 @@ public class Background {
                 }
 
                 player1.display();
-                player1.move();
-                player2.display();
-                player2.move();
+                player1.move(cpulvl);
+
+                    player2.display();
+                    player2.move(cpulvl);
+
+
                 ball.move();
                 ball.display();
             }
@@ -85,9 +88,9 @@ public class Background {
 
 
                 player1.display();
-                player1.move();
+                player1.move(cpulvl);
                 player2.display();
-                player2.move();
+                player2.move(cpulvl);
                 ball.move();
                 ball.display();
 

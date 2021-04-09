@@ -15,7 +15,7 @@ public class Ball {
 
 
     void display(){
-        p.ellipse(pos.x,pos.y,10,10);
+        p.ellipse(pos.x,pos.y,30,30);
 
 
     }
