@@ -103,21 +103,22 @@ public class Background {
 
     public int nextCPUBattle(Goal goal) {
 
-        if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player1Score == 5) {
+        if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player1Score >= 5) {
             screenChange = 6;
             cpulvl++;
             System.out.println(cpulvl);
             if(cpulvl>highscoreCPU)
             highscoreCPU = cpulvl;
         }
-        if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player2Score == 5) {
+        if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player2Score >= 5) {
             screenChange = 2;
         }
         return screenChange;
     }
-        public void mainMenu ( int screenChange){
+        public void mainMenu ( int screenChange, ImageLoader imageLoader){
             //Main menu hvor man kan gå ind i de andre menuer
             if (screenChange == 0) {
+                p.image(imageLoader.mainMenuBackground,0,0);
                 p.textSize(30);
                 p.textAlign(PConstants.CENTER);
                 p.text("Welcome", p.width / 2, 75);

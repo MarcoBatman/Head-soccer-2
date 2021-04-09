@@ -40,7 +40,7 @@ public class Main extends PApplet {
         clear();
 
 
-        background.mainMenu(screenChange);
+        background.mainMenu(screenChange, imageLoader);
         if(screenChange==1)
         background.inGame(goal, ball,player1,player2,imageLoader);
         if(screenChange==5) {
@@ -71,6 +71,7 @@ public class Main extends PApplet {
         }
         screenChange = background.nextCPUBattle(goal);
         goal.player1Score++;
+
         System.out.println(screenChange);
         if (screenChange!=5&&screenChange!=1) {
             player1.pos.x = 50;
