@@ -71,7 +71,6 @@ public class Main extends PApplet {
             clicked = true;
         }
         screenChange = background.nextCPUBattle(goal);
-        goal.player1Score++;
 
         System.out.println(screenChange);
         if (screenChange!=5&&screenChange!=1) {
