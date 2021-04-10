@@ -15,6 +15,7 @@ public class Main extends PApplet {
 
     CPU cpu = new CPU(this,1450,1500,3);
     Player player1 = new Player(this,50,1500,1);
+
     Player player2 = new Player(this,1450,1500,2);
 
     ImageLoader imageLoader = new ImageLoader(this);
