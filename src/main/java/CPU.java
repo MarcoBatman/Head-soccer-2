@@ -21,10 +21,12 @@ public class CPU extends Character {
                 left=false;
             }
 
-            if(ball.pos.x<pos.x && ball.pos.dist(pos)<20 && ball.vel.x>0 ){
+            if(ball.pos.x<pos.x  && ball.vel.x>0 ){
                 up=true;
+                kick=true;
             }else{
                 up=false;
+                kick=false;
             }
 
 
