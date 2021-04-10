@@ -4,6 +4,7 @@ import processing.core.PVector;
 public class Character {
     int count;
     boolean onwayback;
+    boolean stopped;
     PApplet p;
     PVector pos;
     PVector vel = new PVector(0, 0);
@@ -31,13 +32,13 @@ public class Character {
         movementModifire  = (float) (cpulvl*0.2+1);
         if (up&&pos.y==p.height-33){
             vel.y = -5;}
-        if (left){
+        if (left&&!stopped){
             vel.x = -5;
         if(playernr==3){
             vel.x*=movementModifire;
         }
         }
-        if (right){
+        if (right&&!stopped){
             vel.x = 5;
             if(playernr==3){
                 vel.x*=movementModifire;}
@@ -73,7 +74,7 @@ public class Character {
         if (pos.y > p.height-33){
             vel.y = 0;
         pos.y = p.height-33 ;}
-
+stopped=false;
     }
 
     void display() {
@@ -93,6 +94,17 @@ public class Character {
         p.fill(255);
     }
 
+    void hitPlayer(Character player2){
+        if(pos.x<player2.pos.x&&pos.dist(player2.pos)<160&&vel.x>0){
+           vel.x= 0;
+           stopped=true;
+        }
+        if(pos.x>player2.pos.x&&pos.dist(player2.pos)<160&&vel.x<0){
+            vel.x= 0;
+            stopped=true;
+        }
+
+    }
     void hitball(Ball ball){
         
         p1 = new PVector(pos.x,pos.y);

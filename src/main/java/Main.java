@@ -43,9 +43,13 @@ public class Main extends PApplet {
 
         background.mainMenu(screenChange, imageLoader);
         if(screenChange==1)
+            player1.hitPlayer(player2);
+        player2.hitPlayer(player1);
         background.inGame(goal, ball,player1,player2,imageLoader);
         if(screenChange==5) {
         cpu.setMove(ball);
+            player1.hitPlayer(cpu);
+            cpu.hitPlayer(player1);
        // cpu.move(background);
         background.inGame(goal, ball, player1, cpu,imageLoader);
         }
@@ -53,11 +57,13 @@ public class Main extends PApplet {
         goal.insideGoal(ball,player1,cpu);
         background.helpMenu(screenChange);
         background.highScoreMenu(screenChange);
+
         player1.hitball(ball);
         player2.hitball(ball);
         cpu.hitball(ball);
         buttonsInmenues();
         background.displayButtons(buttonList);
+
         screenChanger();
 
 
