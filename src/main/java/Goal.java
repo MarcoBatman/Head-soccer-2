@@ -44,15 +44,13 @@ if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     if(player1.playernr==1) {
         player1.pos.x = 50;
         player2.pos.x = 1450;
-        System.out.println("MÅÅÅÅL p2");
+
     }
     if(player2.playernr==2) {
-        System.out.println("MÅÅÅÅL p2");
         player1.pos.x = 50;
         player2.pos.x = 1450;
     }
     if(player2.playernr==3) {
-        System.out.println("MÅÅÅÅL CPU");
         player1.pos.x = 50;
         player2.pos.x = 1450;
     }
@@ -67,15 +65,12 @@ if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     if(player1.playernr==1) {
         player1.pos.x = 50;
         player2.pos.x = 1450;
-        System.out.println("MÅÅÅÅL p2");
     }
     if(player2.playernr==2) {
-        System.out.println("MÅÅÅÅL p2");
         player1.pos.x = 50;
         player2.pos.x = 1450;
     }
     if(player2.playernr==3) {
-        System.out.println("MÅÅÅÅL CPU");
         player1.pos.x = 50;
         player2.pos.x = 1450;
     }
