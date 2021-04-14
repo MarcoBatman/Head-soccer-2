@@ -132,7 +132,7 @@ public class Background {
             if (screenChange == 2) {
                 p.textSize(32);
                 p.textAlign(PConstants.CENTER);
-                p.text("Highscore for this sesion", p.width / 2, 150);
+                p.text("Highscore for this session", p.width / 2, 150);
                 p.textSize(50);
                 p.text(highscoreCPU,p.width/2,333);
             }

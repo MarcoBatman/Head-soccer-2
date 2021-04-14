@@ -97,7 +97,7 @@ public class Main extends PApplet {
             buttonList.add(new Button(this, 500, 200, 200, 50, "Spil mod ven"));
             buttonList.add(new Button(this, 800, 200, 200, 50, "Spil mod CPU"));
             buttonList.add(new Button(this, 500, 500, 200, 50, "Highscore"));
-            buttonList.add(new Button(this, 800, 500, 200, 50, "Controlls"));
+            buttonList.add(new Button(this, 800, 500, 200, 50, "Controls"));
 
             //Gør så den kun tegner knapperne på skærmen 1 gang
             buttonStopper= false;

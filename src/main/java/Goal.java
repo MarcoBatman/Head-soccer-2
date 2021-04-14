@@ -34,20 +34,28 @@ PApplet p;
     }
 
    public void insideGoal(Ball ball, Character player1, Character player2){
-/*
+
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
     player2Score++;
     ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
-    if(player2.playernr==2)
-    System.out.println("MÅÅÅÅL p2");
-    if(player2.playernr==3)
-    System.out.println("MÅÅÅÅL CPU");
-    player1.pos.x=50;
-    player2.pos.x=950;
-
+    if(player1.playernr==1) {
+        player1.pos.x = 50;
+        player2.pos.x = 1450;
+        System.out.println("MÅÅÅÅL p2");
+    }
+    if(player2.playernr==2) {
+        System.out.println("MÅÅÅÅL p2");
+        player1.pos.x = 50;
+        player2.pos.x = 1450;
+    }
+    if(player2.playernr==3) {
+        System.out.println("MÅÅÅÅL CPU");
+        player1.pos.x = 50;
+        player2.pos.x = 1450;
+    }
 }
 if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
@@ -55,14 +63,28 @@ if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
-    System.out.println("MÅÅÅÅÅL p1");
-    player1.pos.x=50;
-    player2.pos.x=1450;
+
+    if(player1.playernr==1) {
+        player1.pos.x = 50;
+        player2.pos.x = 1450;
+        System.out.println("MÅÅÅÅL p2");
+    }
+    if(player2.playernr==2) {
+        System.out.println("MÅÅÅÅL p2");
+        player1.pos.x = 50;
+        player2.pos.x = 1450;
+    }
+    if(player2.playernr==3) {
+        System.out.println("MÅÅÅÅL CPU");
+        player1.pos.x = 50;
+        player2.pos.x = 1450;
+    }
+    }
     }
 
 
-*/
-}
+
+
 
 
     public void moveGoal(){
