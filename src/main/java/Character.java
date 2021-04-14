@@ -87,7 +87,12 @@ stopped=false;
 
         }
         if(playernr==2||playernr==3){
-        p.fill(0,255,0);
+            if (playernr==2) {
+                p.fill(0, 255, 0);
+            }
+            if (playernr==3){
+                p.fill(0,0,255);
+            }
             p.ellipse(pos.x, pos.y, 80, 80);
             p.ellipse(pos.x,pos.y-50,30,30);
         p.ellipse(pos.x-30-count,pos.y+30,20,20);}
