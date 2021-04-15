@@ -56,6 +56,10 @@ public class Ball {
             vel.y=-vel.y/2;
             pos.y-=5;
         }
+        if (pos.y>=goal.posY-10 && pos.y<=goal.posY  && pos.x<1428){
+            vel.y=-vel.y/2;
+            pos.y-=5;
+        }
 
         pos.add(vel);
     }
