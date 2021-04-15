@@ -42,8 +42,9 @@ if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.y = 500;
     ball.vel.mult(0);
 
-    player1.pos.x = 50;
-    player2.pos.x = 1450;
+    player1.pos.x = 75;
+    player2.pos.x = 1425;
+    System.out.println("MÅL p2");
 }
 if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     posY=700;
@@ -51,16 +52,11 @@ if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
-    player1.pos.x = 50;
-    player2.pos.x = 1450;
-
+    player1.pos.x = 75;
+    player2.pos.x = 1425;
+    System.out.println("MÅL p1");
     }
     }
-
-
-
-
-
 
     public void moveGoal(){
         if (posY<=400) {

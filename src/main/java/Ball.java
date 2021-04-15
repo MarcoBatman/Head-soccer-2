@@ -42,13 +42,13 @@ public class Ball {
             pos.y=2;
         }
         if (pos.y>=goal.posY+300 && pos.x<72){
-            System.out.println("hej");
+            //System.out.println("hej");
             vel.x= -vel.x/3;
             pos.x=74;
 
         }
         if (pos.y>=goal.posY+300 && pos.x>1428) {
-            System.out.println("hej");
+            //System.out.println("hej");
             vel.x = -vel.x / 3;
             pos.x=1426;
         }
