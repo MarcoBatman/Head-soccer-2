@@ -31,7 +31,7 @@ public class Character {
     void move(int cpulvl) {
         movementModifire  = (float) (cpulvl*0.2+1);
         if (up&&pos.y==p.height-33){
-            vel.y = -5;}
+            vel.y = -10;}
         if (left&&!stopped){
             vel.x = -5;
         if(playernr==3){
@@ -100,10 +100,12 @@ stopped=false;
     }
 
     void hitPlayer(Character player2){
+        if(playernr==0)
         if(pos.x<player2.pos.x&&pos.dist(player2.pos)<160&&vel.x>0){
            vel.x= 0;
            stopped=true;
         }
+        if (playernr>0)
         if(pos.x>player2.pos.x&&pos.dist(player2.pos)<160&&vel.x<0){
             vel.x= 0;
             stopped=true;
