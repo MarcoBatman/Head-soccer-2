@@ -41,6 +41,7 @@ if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
+
     player1.pos.x = 50;
     player2.pos.x = 1450;
 }
@@ -50,7 +51,6 @@ if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     ball.pos.x = p.width/2;
     ball.pos.y = 500;
     ball.vel.mult(0);
-
     player1.pos.x = 50;
     player2.pos.x = 1450;
 

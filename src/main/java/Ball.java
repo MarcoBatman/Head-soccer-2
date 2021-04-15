@@ -19,7 +19,7 @@ public class Ball {
 
 
     }
-    void move(){
+    void move(Goal goal){
         vel.add(forceY);
         if(vel.x<0)
         vel.add(forceX);
@@ -40,6 +40,21 @@ public class Ball {
         if(pos.y<0){
             vel.y= -vel.y/3;
             pos.y=2;
+        }
+        if (pos.y>=goal.posY+300 && pos.x<72){
+            System.out.println("hej");
+            vel.x= -vel.x/3;
+            pos.x=74;
+
+        }
+        if (pos.y>=goal.posY+300 && pos.x>1428) {
+            System.out.println("hej");
+            vel.x = -vel.x / 3;
+            pos.x=1426;
+        }
+        if (pos.y>=goal.posY-10 && pos.y<=goal.posY  && pos.x<72){
+            vel.y=-vel.y/2;
+            pos.y-=5;
         }
 
         pos.add(vel);

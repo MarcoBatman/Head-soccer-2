@@ -61,7 +61,7 @@ public class Background {
                     player2.move(cpulvl);
 
 
-                ball.move();
+                ball.move(goal);
                 ball.display();
             }
             if (screenChange == 5) {
@@ -92,7 +92,7 @@ public class Background {
                 player1.move(cpulvl);
                 player2.display();
                 player2.move(cpulvl);
-                ball.move();
+                ball.move(goal);
                 ball.display();
 
                 p.rect(1380,15,95,50);
