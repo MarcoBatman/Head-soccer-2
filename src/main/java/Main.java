@@ -58,8 +58,8 @@ public class Main extends PApplet {
             player1.hitball(ball);
             cpu.hitball(ball);
         }
-        goal.insideGoal(ball, player1, player2);
-        goal.insideGoal(ball,player1,cpu);
+        //goal.insideGoal(ball, player1, player2);
+        //goal.insideGoal(ball,player1,cpu);
         background.helpMenu(screenChange);
         background.highScoreMenu(screenChange);
 

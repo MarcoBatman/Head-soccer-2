@@ -28,7 +28,7 @@ public class Character {
         sizelist[2] = 40;
     }
 
-    void move(int cpulvl) {
+    void move(int cpulvl,Character player2) {
         movementModifire  = (float) (cpulvl*0.2+1);
         if (up&&pos.y==p.height-33){
             vel.y = -10;}
@@ -60,6 +60,7 @@ public class Character {
         }
 
         vel.add(resistanceY);
+        hitPlayer( player2);
         pos.add(vel);
         if (pos.x <= 0) {
             vel.x = 0;
@@ -100,15 +101,15 @@ stopped=false;
     }
 
     void hitPlayer(Character player2){
-        if(playernr==0)
-        if(pos.x<player2.pos.x&&pos.dist(player2.pos)<160&&vel.x>0){
-           vel.x= 0;
-           stopped=true;
+
+        if(pos.x<player2.pos.x&&pos.dist(player2.pos)<160){
+           vel.x-= 5;
+
         }
-        if (playernr>0)
-        if(pos.x>player2.pos.x&&pos.dist(player2.pos)<160&&vel.x<0){
-            vel.x= 0;
-            stopped=true;
+
+        if(pos.x>player2.pos.x&&pos.dist(player2.pos)<160){
+            vel.x+= 5;
+
         }
 
     }
