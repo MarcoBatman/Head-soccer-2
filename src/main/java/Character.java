@@ -102,12 +102,12 @@ stopped=false;
     void hitPlayer(Character player2){
         if(playernr==0)
         if(pos.x<player2.pos.x&&pos.dist(player2.pos)<160&&vel.x>0){
-           vel.x= 0;
+           vel.x-= 5;
            stopped=true;
         }
         if (playernr>0)
         if(pos.x>player2.pos.x&&pos.dist(player2.pos)<160&&vel.x<0){
-            vel.x= 0;
+            vel.x+= 5;
             stopped=true;
         }
 

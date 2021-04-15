@@ -37,9 +37,9 @@ public class Background {
             p.text(goal.player1Score, p.width / 2 - 75, 125);
             p.text(goal.player2Score, p.width / 2 + 75, 125);
             p.fill(255);
-
-            goal.displayGoal();
             goal.insideGoal(ball, player1, player2);
+            goal.displayGoal();
+
             if (screenChange == 1) {
                 //Versus buddy
 
@@ -66,6 +66,7 @@ public class Background {
             }
             if (screenChange == 5) {
                 //Versus CPU
+
                 if (goal.player1Score >= 5&& goal.player1Score>=goal.player2Score+2) {
                     p.textSize(36);
                     p.text("Player 1 wins!\nClick on Play versus new CPU to\nfight versus a new CPU\n that is even harder", p.width / 2, p.height / 2);
