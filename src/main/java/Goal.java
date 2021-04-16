@@ -1,7 +1,6 @@
 import processing.core.PApplet;
 
 public class Goal {
-    int moveY = 0; // Hvad gør denne?
     float posY = 700;
     int player1Score =0;
     int player2Score = 0;
