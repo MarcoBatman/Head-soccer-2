@@ -10,7 +10,7 @@ public class Player extends Character {
 
 
     boolean setMove(int k, boolean b) {
-
+// tager sætter kotrolls så maa kan styre spillerne
 if(playernr==1)
         switch (k) {
           case +'W':

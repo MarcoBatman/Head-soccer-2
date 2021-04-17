@@ -143,6 +143,7 @@ public class Main extends PApplet {
     }
 
     public void screenChanger(){
+        // skifter mellem skermene man skal være på
         buttonEffect(0,0,1); //Fra main menu til spil mod ven
         buttonEffect(1,0,5); //Fra main menu til spil mod CPU
         buttonEffect(2,0,2); //Fra main menu til kontrolls menuen
@@ -157,6 +158,7 @@ public class Main extends PApplet {
     }
 
     public void buttonEffect(int nrButton, int onScreen, int toScreen){
+        // giver knapperne deres job
     if (screenChange==onScreen&&changedScreen == false){
         if (buttonList.get(nrButton).isButtonPressed()){
             screenChange = toScreen;
@@ -172,11 +174,13 @@ public class Main extends PApplet {
 
 
     public void keyPressed() {
+        // tager imod inputs til at styre spillerne
         player1.setMove(keyCode,true);
         player2.setMove(keyCode,true);
     }
 
     public void keyReleased() {
+        // tager imod inputs til at styre spillerne
         player1.setMove(keyCode,false);
         player2.setMove(keyCode,false);
     }

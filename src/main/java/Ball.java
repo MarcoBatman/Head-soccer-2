@@ -15,11 +15,13 @@ public class Ball {
 
 
     void display(){
+        //displayer bolden
         p.ellipse(pos.x,pos.y,30,30);
 
 
     }
     void move(Goal goal){
+        //får bolden til at rykke sig
         vel.add(forceY);
         if(vel.x<0)
         vel.add(forceX);
