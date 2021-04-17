@@ -6,6 +6,8 @@ public class CPU extends Character {
         super(p, posX, posY,playernr);
     }
 
+    //setMove funktionen funktion er at få CPU'en til at bevæge sig.
+    //CPU'en bevæger sig efter boldens position og hopper eller sparker efter bolden under specielle forhold.
     void setMove(Ball ball) {
 
         if (playernr == 3){

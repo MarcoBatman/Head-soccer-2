@@ -10,7 +10,7 @@ PApplet p;
     this.p =p;
 
     }
-
+    //displayGoal er en funktion der tegner målet
     public void displayGoal(){
         //Spiller 1 mål
 
@@ -31,7 +31,7 @@ PApplet p;
         p.fill(255);
 
     }
-
+    //insideGoal er en funktion der tager højde for boldens position og ser om den er inden for målet og hvis den er inde for målet bliver der givet et point og alt bliver så resat
    public void insideGoal(Ball ball, Character player1, Character player2){
 
 if (ball.pos.x<70&&ball.pos.y<posY+300&&ball.pos.y>posY){
@@ -56,7 +56,7 @@ if (ball.pos.x>1430&&ball.pos.y<posY+300&&ball.pos.y>posY){
     System.out.println("MÅL p1");
     }
     }
-
+    //moveGoal er en funktion der bevæger målet
     public void moveGoal(){
         if (posY<=400) {
             vel = (float) 0.5;

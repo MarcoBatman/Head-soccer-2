@@ -18,7 +18,7 @@ public class Button {
         this.y = y;
 
     }
-
+    //drawButton tegner vores knap
     public void drawButton() {
         p.textSize(24);
         p.fill(255);
@@ -30,12 +30,13 @@ public class Button {
     }
 
 
-
+    //isButtonPressed gør så knappen virker ved at retunere en boolean
     boolean isButtonPressed() {
         return pressed;
 
 
     }
+    //registrerClick tjekker om musen er indenfor vores knap
     void registerClick(float xin, float yin) {
 
         if (xin > x && xin < x + w && yin < y + h && yin > y) {
