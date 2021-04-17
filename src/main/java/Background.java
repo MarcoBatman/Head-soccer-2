@@ -22,7 +22,8 @@ public class Background {
 
         }
     }
-
+        //inGame funktionen holder styr på alt det der handler om spillet og tegner det, den modtager bolden, spillerene og en baggrund.
+        // Vi har inddelt det så hvis screenChange er 1 eller 5 kommer spillet frem, og an på hvilken en screenChange det er kommer an på hvilken gamemode man spiller.
     public void inGame(Goal goal, Ball ball, Character player1, Character player2,ImageLoader imageLoader) {
         if (screenChange == 1 || screenChange == 5) {
             p.image(imageLoader.wall,0,0);
@@ -104,7 +105,8 @@ public class Background {
 
         }
     }
-
+        //nextCPUBattle er en funktion der sørger for at man kan spille en form for "endless run" mod CPU'en, da den efter spillet gør så spilleren kan spille mod en sværere CPU
+        //nextCPUBattle gemmer også hvor langt man er kommet og putter det ind i highscore menuen
     public int nextCPUBattle(Goal goal) {
 
         if (p.mouseX > p.width / 30 + 50 && p.mouseX < p.width / 3 + 300 && p.mouseY > 325 && p.mouseY < 400 && goal.player1Score >= 5&&screenChange==5) {
@@ -120,6 +122,7 @@ public class Background {
         }
         return screenChange;
     }
+        //mainMenu funktionen tegner vores main menu ved hjælp fra ImageLoader klassen, som giver os et billede.
         public void mainMenu ( int screenChange, ImageLoader imageLoader){
             //Main menu hvor man kan gå ind i de andre menuer
             if (screenChange == 0) {
@@ -129,6 +132,7 @@ public class Background {
                 p.text("Welcome to Obeseball", p.width / 2, 75);
             }
         }
+        //highScoreMenu holder styr på ens highscore.
         public void highScoreMenu ( int screenChange){
             //Viser highscores (gemmes ikke hvis man lukker spillet)
             if (screenChange == 2) {
@@ -139,8 +143,8 @@ public class Background {
                 p.text(highscoreCPU,p.width/2,333);
             }
         }
-        public void helpMenu ( int screenChange){
-            //Viser kontrols
+        //helpMenu viser hvordan man styre spillet
+    public void helpMenu ( int screenChange){
             if (screenChange == 3) {
                 p.textSize(32);
                 p.textAlign(PConstants.CENTER);

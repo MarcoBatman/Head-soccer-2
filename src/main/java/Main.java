@@ -13,10 +13,10 @@ public class Main extends PApplet {
     boolean clicked = false;
 
 
-    CPU cpu = new CPU(this,1450,1500,3);
-    Player player1 = new Player(this,50,1500,1);
+    CPU cpu = new CPU(this,1425,1500,3);
+    Player player1 = new Player(this,75,1500,1);
 
-    Player player2 = new Player(this,1450,1500,2);
+    Player player2 = new Player(this,1425,1500,2);
 
     ImageLoader imageLoader = new ImageLoader(this);
 
