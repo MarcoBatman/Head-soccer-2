@@ -70,7 +70,6 @@ public class Main extends PApplet {
 
         screenChanger();
 
-
     }
 
     public void mouseClicked(){
@@ -81,7 +80,6 @@ public class Main extends PApplet {
             clicked = true;
         }
         screenChange = background.nextCPUBattle(goal);
-        goal.player1Score ++;
         System.out.println(screenChange);
         if (screenChange!=5&&screenChange!=1) {
             player1.pos.x = 50;

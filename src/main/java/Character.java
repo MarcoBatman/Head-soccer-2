@@ -56,7 +56,6 @@ public class Character {
                  onwayback=true;
              if (count==0)
                  onwayback=false;
-
         }
 
         vel.add(resistanceY);
